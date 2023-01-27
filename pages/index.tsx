@@ -1,18 +1,17 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Template, Nav, Main } from '../components';
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Japan Guide</title>
-        <meta name="description" content="Welcome to Anna's Japan Guide" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-    </>
-  )
+    <Template>
+      <Nav />
+      <Main texts={TEXTS} />
+    </Template>
+  );
 }
+
+const TEXTS = [
+  'Welcome!',
+  'Here you will find some tips that I was able to summarize during my visits.',
+  'Japan is a country with many different areas and climates, so there is a lot to experience on your vacation.',
+  'I wish you much fun!',
+];
