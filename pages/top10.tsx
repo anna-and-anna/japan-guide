@@ -8,8 +8,8 @@ const TOP10 = () => {
         TOP10
       </div>
       <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 p-16">
-        {ITEMS.map((item) => (
-          <ImageCard text={item} />
+        {ITEMS.map((item, i) => (
+          <ImageCard key={i} text={item} />
         ))}
       </div>
     </Template>

@@ -10,8 +10,8 @@ const Main = ({ image, texts }: MainType) => {
     <div className="flex flex-col items-center py-16 ">
       <div className="bg-white rounded-full w-52 h-52" />
       <div className="my-12 text-center font-light w-96">
-        {texts.map((text) => (
-          <p className='mb-4'>{text}</p>
+        {texts.map((text, i) => (
+          <p key={i} className='mb-4'>{text}</p>
         ))}
       </div>
       <ChevronDoubleDown />
